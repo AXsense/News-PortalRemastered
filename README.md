@@ -1,7 +1,7 @@
 # News_Portal_Version_D7
 Project News Portal. Module D7. Version_D7. 
 
-Python, Django. + Celery + Redis + Linux
+Python, Django. + Celery + Redis + Linux (Ubuntu)
 
 Celery:
 - cоздание простых задач (рассылка уведомлений подписчикам после создания новости),
