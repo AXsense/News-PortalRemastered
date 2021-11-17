@@ -10,6 +10,16 @@ from datetime import timedelta, date
 
 
 @shared_task
+def subscribe_category_confirmation_message(user_name, email, category_name):
+    send_mail(
+        subject=f'News Portal: подписка на обновления категории {category_name}',
+        message=f'«{user_name}», вы подписались на обновления категории: «{category_name}».',
+        from_email='example@example.ru',
+        recipient_list=[f'{email}', ],
+    )
+
+
+@shared_task
 def notify_subs(sub_name, sub_email, title, category, pub_time, pk):
     post = Post.objects.get(id=pk)
     # print(sub_name, sub_email, title, category, pub_time, post)
