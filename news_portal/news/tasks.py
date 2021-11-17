@@ -1,7 +1,6 @@
-from .models import Post
 from celery import shared_task
 
-from django.core.mail import EmailMultiAlternatives  # импортируем класс для создание объекта письма с html
+from django.core.mail import EmailMultiAlternatives, send_mail  # импортируем класс для создание объекта письма с html
 from django.template.loader import render_to_string  # импортируем функцию, которая срендерит наш html в текст
 
 from .models import Post, Category
